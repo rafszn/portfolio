@@ -1,0 +1,719 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1a1a1a;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+@mixin mobile {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+
+// TODO ANIMATEDLOGO
+.animated-logo {
+  margin-top: -1.5rem;
+  cursor: pointer;
+  display: inline-block;
+
+  .bars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    .bar {
+      width: 5px;
+      height: 5px;
+
+      &.bar1 {
+        width: 35px;
+        transition: all 1s ease-in-out;
+      }
+    }
+  }
+  .text {
+    position: relative;
+    width: 100%;
+
+    .first {
+      position: absolute;
+      top: -0.4rem;
+      left: 0;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+    .last {
+      position: absolute;
+      top: -0.4rem;
+      font-weight: 100;
+      left: 1.2rem;
+      font-size: 2rem;
+      opacity: 0;
+
+      transition: all 1s ease;
+    }
+  }
+
+  &:hover .bar.bar1 {
+    width: 135px;
+  }
+
+  &:hover .last {
+    left: 3.4rem;
+    opacity: 1;
+  }
+}
+
+//TODO DEFAULTHEADER
+.header {
+  position: fixed;
+  padding: 0.5rem 1rem;
+  z-index: 8000;
+  width: 100%;
+}
+
+//TODO HEROSECTION
+.hero {
+  width: 100%;
+  position: relative;
+  padding: 18rem 4rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+
+  @include mobile {
+    padding: 13rem 1rem;
+    flex-direction: column-reverse;
+  }
+
+  .text-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    // padding-right: rem;
+
+    @include mobile {
+    }
+
+    .wrapper {
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .text {
+      font-weight: 300;
+      font-size: 1rem;
+      margin-top: -2rem;
+
+      @include mobile {
+        font-size: 0.8rem;
+        margin-top: -0.5rem;
+      }
+    }
+  }
+  .floating-image-wrapper {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+//TODO PARALLAXSVG
+.hero-parallax-arrow {
+  position: absolute;
+  // rotate: -90deg;
+  opacity: 0.2;
+  stroke: rgba(255, 255, 255, 0.5);
+  stroke-width: 0.05;
+  z-index: -10;
+  fill: transparent;
+  // scale: 0.35;
+
+  @include mobile {
+    // top: 35%;
+    // scale: 1.5;
+  }
+}
+
+//TODO TEXTHIGHLIGHTER
+.text-highlighter {
+  margin-top: -5rem;
+
+  @include mobile {
+    margin-top: -2.1rem;
+  }
+
+  .title {
+    @include mobile {
+      text-align: center;
+    }
+
+    .letter {
+      font-size: 128px;
+      text-transform: uppercase;
+
+      @include mobile {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+//TODO STYLED BUTTON
+.styled-button {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 250px;
+  padding: 0.6rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5%;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+
+  .button-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .circle {
+      position: absolute;
+      left: 20px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: white;
+      transition: all 1s ease-in-out;
+    }
+    .view {
+      letter-spacing: 2px;
+      z-index: 4;
+      transition: all 1s ease-in-out;
+    }
+  }
+
+  &:hover .circle {
+    scale: 33.5;
+  }
+  &:hover .view {
+    color: black;
+    transform: translateX(-20px);
+  }
+}
+
+//TODO DESKTOPSIDEBAR
+.desktop-sidebar {
+  position: fixed;
+  top: 10%;
+  right: 0;
+  width: 600px;
+  height: 80vh;
+  background: #0a0a0ac1;
+  backdrop-filter: blur(20px);
+  color: white;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 4rem;
+  font-size: 3rem;
+  transition: all 0.5s ease-in-out;
+  z-index: 9000;
+
+  @include mobile {
+    width: 300px;
+    backdrop-filter: blur(50px);
+    background: #0a0a0a93;
+    padding: 0 1rem;
+  }
+
+  .sidebar-wrapper {
+    font-family: "Satoshi", sans-serif;
+  }
+
+  &.activee {
+    transform: translateX(700px);
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 0.5rem 1rem;
+  }
+}
+
+//TODO WHITESHADOW
+.white-shadow {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background: white;
+  filter: blur(250px);
+}
+
+//TODO CONTAINER
+.container-one {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .container-wrapper {
+    width: 1440px;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+
+//TODO EXPERTISE SECTION
+.expertise {
+  padding: 10rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mobile {
+    padding: 6rem 1rem;
+    padding-bottom: 4rem;
+  }
+
+  .wrapper {
+    width: 1440px;
+
+    .overview {
+      width: 80%;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    .exp {
+      display: flex;
+      padding: 2rem;
+
+      @include mobile {
+        padding: 2rem 0;
+      }
+
+      .empty {
+        flex: 0.2;
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+      .exp-text {
+        flex: 0.8;
+        font-family: "Satoshi", sans-serif;
+        font-size: 1.1rem;
+        font-weight: 200;
+
+        @include mobile {
+          flex: 1;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+          letter-spacing: 2.5px;
+          font-weight: 500;
+          margin: 1rem 0;
+        }
+
+        .lists {
+          display: flex;
+          align-items: center;
+          padding-left: 1rem;
+
+          @include mobile {
+            gap: 1rem;
+          }
+
+          p {
+            margin: 1rem 0;
+          }
+
+          .first-list {
+            flex: 1;
+
+            @include mobile {
+            }
+          }
+          .second-list {
+            flex: 1;
+
+            @include mobile {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//TODO WORK PREVIEW SECTION
+.work-preview {
+  padding: 10rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mobile {
+    padding: 6rem 1rem;
+    padding-bottom: 4rem;
+  }
+
+  .wrapper {
+    width: 1440px;
+    position: relative;
+
+    .preview {
+      display: flex;
+      gap: 1rem;
+
+      @include mobile {
+        flex-direction: column;
+      }
+
+      .image-wrapper {
+        flex: 1;
+        padding: 2rem;
+        height: 500px;
+
+        @include mobile {
+          padding: 0;
+        }
+
+        img {
+          height: 100%;
+          object-fit: cover;
+          border-radius: 0.3rem;
+          border: 1px solid whitesmoke;
+
+          @include mobile {
+            height: 250px;
+          }
+        }
+      }
+
+      .textcontent-wrapper {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        h1 {
+          font-size: 2.5rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+
+          @include mobile {
+            font-size: 2rem;
+          }
+        }
+
+        .pp {
+          font-size: 1rem;
+          font-weight: 300;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    .mobile-preview {
+      position: absolute;
+      top: 200px;
+      left: -20px;
+      width: 120px;
+      height: 220px;
+
+      @include mobile {
+        width: 100px;
+        top: 100px;
+      }
+
+      .mobile-preview-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          border-radius: 0.3rem;
+          border: 1px solid white;
+          object-fit: cover;
+          box-shadow: 2px 20px 20px rgba(0, 0, 0, 0.836);
+        }
+      }
+    }
+  }
+}
+
+//TODO ELASTIC CARD
+.elastic-card {
+  width: 300px;
+  margin-top: 1.5rem;
+
+  .elastic-card-content {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    .dash {
+      width: 30px;
+      height: 1px;
+      background: white;
+      transition: all 1s ease-in-out;
+    }
+
+    .p {
+      font-size: 16px;
+      font-weight: 300;
+      transition: all 1s ease-in-out;
+    }
+  }
+
+  &:hover {
+    .dash {
+      width: 70px;
+    }
+    p {
+      letter-spacing: 1.5px;
+    }
+  }
+}
+
+//TODO SELECTEDWORK SECTION
+
+.selected-works {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mobile {
+    // border: 1px solid red;
+  }
+
+  .selected-wrapper {
+    .image-preview {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include mobile {
+      }
+
+      .preview {
+        margin-top: -8rem;
+        display: flex;
+        align-items: center;
+
+        font-family: "Satoshi", sans-serif;
+        font-weight: 200;
+        font-size: 1.4rem;
+        color: #677a9b;
+        gap: 10px;
+        z-index: 30;
+
+        @include mobile {
+          font-size: 1rem;
+          gap: 5px;
+          margin-top: -6rem;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        .img {
+          width: 100%;
+
+          img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 0.5px solid white;
+            transition: all 0.5s ease-in-out;
+
+            @include mobile {
+              width: 35px;
+              height: 35px;
+            }
+
+            &:hover {
+              transform: translateY(-30px);
+              border: none;
+              scale: 5;
+            }
+          }
+        }
+      }
+    }
+
+    .big-texts {
+      display: flex;
+      gap: 1.5rem;
+
+      @include mobile {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+    .small-text {
+      text-align: center;
+      font-family: "Satoshi", sans-serif;
+      font-size: 1.25rem;
+      font-weight: 200;
+      margin-top: -1rem;
+
+      @include mobile {
+        font-size: 1rem;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+//TODO SINGLEWORK CARD
+.single-work {
+  padding: 10rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mobile {
+    padding: 7rem 1rem;
+  }
+
+  .wrapper {
+    width: 1440px;
+    position: relative;
+
+    .preview {
+      display: flex;
+      gap: 0.5rem;
+
+      @include mobile {
+        flex-direction: column;
+        gap: 3rem;
+      }
+
+      .image-wrapper {
+        flex: 1.8;
+        height: 650px;
+
+        @include mobile {
+        }
+
+        img {
+          height: 100%;
+          object-fit: cover;
+          border-radius: 0.3rem;
+          border: 1px solid whitesmoke;
+          box-shadow: 2px 20px 20px rgba(0, 0, 0, 0.836);
+
+          @include mobile {
+            height: 250px;
+          }
+        }
+      }
+
+      .textcontent-wrapper {
+        padding-left: 1rem;
+
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        @include mobile {
+          justify-content: center;
+          padding-left: 0;
+        }
+
+        .preview {
+          margin-top: -8rem;
+          display: flex;
+          align-items: center;
+          font-family: "Satoshi", sans-serif;
+          font-weight: 200;
+          font-size: 1.2rem;
+          color: #7b9cd6;
+          gap: 5px;
+
+          @include mobile {
+            display: block;
+          }
+
+          @include mobile {
+            margin-top: 0;
+          }
+        }
+
+        h1 {
+          font-size: 2.5rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+
+        .pp {
+          font-size: 1rem;
+          font-weight: 300;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    .mobile-preview {
+      position: absolute;
+      top: 200px;
+      left: -100px;
+      width: 200px;
+      height: 220px;
+
+      @include mobile {
+        top: 100px;
+        left: -80px;
+      }
+
+      .mobile-preview-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          border-radius: 0.3rem;
+          border: 1px solid white;
+          object-fit: cover;
+          box-shadow: 2px 20px 20px rgba(0, 0, 0, 0.836);
+          height: 200px;
+        }
+      }
+    }
+  }
+}
