@@ -268,6 +268,10 @@ body {
   height: 300px;
   background: white;
   filter: blur(250px);
+
+  @include mobile {
+    left: -300px;
+  }
 }
 
 //TODO CONTAINER
@@ -715,5 +719,16 @@ body {
         }
       }
     }
+  }
+}
+
+
+//TODP HOLLOW CURSOR
+
+.hollow-cursor{
+
+  @include mobile {
+
+    display: none;
   }
 }

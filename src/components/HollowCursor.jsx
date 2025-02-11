@@ -29,6 +29,7 @@ const HollowCursor = () => {
   return (
     <div
       ref={followerRef}
+      className="hollow-cursor"
       style={{
         position: "fixed",
         top: 0,
