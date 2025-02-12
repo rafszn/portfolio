@@ -21,7 +21,7 @@ const LetsTalkSection = ({ text }) => {
             <h2 className="title">Let&apos;s talk!</h2>
             <p className="web">{text}</p>
             <p className="last">Tell me about your next project.</p>
-            <StyledButton text={"CONTACT"} />
+            <StyledButton text={"CONTACT"} path="/contact"/>
           </div>
         </div>
       </div>
