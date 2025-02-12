@@ -90,8 +90,9 @@ body {
   gap: 3rem;
 
   @include mobile {
-    padding: 13rem 1rem;
+    padding: 10rem 1rem;
     flex-direction: column-reverse;
+    // border: 1px solid red;
   }
 
   .text-wrapper {
@@ -101,6 +102,7 @@ body {
     // padding-right: rem;
 
     @include mobile {
+      // border: 1px solid;
     }
 
     .wrapper {
@@ -123,6 +125,10 @@ body {
     }
   }
   .floating-image-wrapper {
+
+    @include mobile{
+      // border: 1px solid ;
+    }
     flex: 1;
     width: 100%;
   }
