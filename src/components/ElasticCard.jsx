@@ -7,11 +7,11 @@ const ElasticCard = ({
   path = "/",
 }) => {
   return (
-    <Link to={path} className="elastic-link">
-      <div className="elastic-card">
+    <Link to={path} className="elastic-link ">
+      <div className="elastic-card ">
         <div className="elastic-card-content">
           <div className="dash" />
-          <p className="p" style={{ fontSize, fontWeight }}>
+          <p className="p cursor-link" style={{ fontSize, fontWeight }}>
             {text}
           </p>
         </div>

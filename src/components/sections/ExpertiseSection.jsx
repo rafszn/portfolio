@@ -3,7 +3,7 @@ import StaggeredTextReveal from "../StaggeredTextReveal";
 
 const ExpertiseSection = () => {
   return (
-    <div className="expertise">
+    <div className="expertise bg-[#1a1a1a]">
       <div className="wrapper">
         <div className="overview">
           <StaggeredTextReveal text="Hi, I'm Rafael, a Fullstack Software Developer. I love building engaging digital experiences with React, Node.js, and MongoDB. Problem-solving through code drives me, and I'm passionate about creating innovative solutions that make an impact." />

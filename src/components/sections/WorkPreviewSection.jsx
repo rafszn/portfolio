@@ -25,7 +25,7 @@ const WorkPreviewSection = () => {
     { scope: containerRef },
   );
   return (
-    <div ref={containerRef} className="work-preview">
+    <div ref={containerRef} className="work-preview bg-[#1a1a1a]">
       <div className="wrapper">
         <div className="preview">
           <div className="image-wrapper">

@@ -6,7 +6,7 @@ export const WORKS = [
     tag: "Ecomm | Shopify",
     demoLink: "https://byola.co",
     image: "/assets/byola.png",
-    mobile: "/assets/mobile-byola.png"
+    mobile: "/assets/mobile-byola.png",
   },
   {
     title: "Prizeless",
@@ -15,7 +15,7 @@ export const WORKS = [
     tag: "Comparison Platform | React Framework",
     demoLink: "https://prizeless.ng",
     image: "/assets/prizeless.png",
-    mobile: "/assets/prizeless-mobile.png"
+    mobile: "/assets/prizeless-mobile.png",
   },
   {
     title: "Luka Mason",
@@ -24,7 +24,7 @@ export const WORKS = [
     tag: "Ecomm | Shopify",
     image: "/assets/lukamason.png",
     demoLink: "https://www.lukamason.com",
-    mobile: "/assets/lukamason-mobile.png"
+    mobile: "/assets/lukamason-mobile.png",
   },
   {
     title: "AgroHive",
@@ -33,7 +33,7 @@ export const WORKS = [
     tag: "Agritech Platform | React Framework",
     demoLink: "https://agrohive.co",
     image: "/assets/agrohive.png",
-    mobile: "/assets/agrohive-mobile.png"
+    mobile: "/assets/agrohive-mobile.png",
   },
   {
     title: "Hemam Synergy",
@@ -42,6 +42,21 @@ export const WORKS = [
     tag: "Agribusiness Platform | React Framework",
     demoLink: "https://hemamsynergy.com",
     image: "/assets/hemam.png",
-    mobile: "/assets/hemam-mobile.png"
+    mobile: "/assets/hemam-mobile.png",
+  },
+];
+
+export const NAVIGATION = [
+  {
+    label: "Home",
+    path: "/",
+  },
+  {
+    label: "Work",
+    path: "/work",
+  },
+  {
+    label: "Contact",
+    path: "/contact",
   },
 ];

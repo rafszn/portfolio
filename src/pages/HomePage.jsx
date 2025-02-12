@@ -4,7 +4,7 @@ import ExpertiseSection from "../components/sections/ExpertiseSection";
 import WorkPreviewSection from "../components/sections/WorkPreviewSection";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import ParallaxSvg from "../components/ParallaxSvg";
+import LetsTalkSection from "../components/sections/LetsTalkSection";
 gsap.registerPlugin(useGSAP);
 const HomePage = () => {
   useGSAP(() => {
@@ -15,15 +15,15 @@ const HomePage = () => {
     });
   });
   return (
-    <div className="home">
+    <div className="home z-10">
       <DesktopSidebar />
-      {/* <ParallaxSvg/> */}
       <HeroSection />
       <ExpertiseSection />
       <WorkPreviewSection />
+      <LetsTalkSection text={"Need a website?"} />
       <div
         style={{
-          height: "500vh",
+          height: "60vh",
         }}
       ></div>
     </div>

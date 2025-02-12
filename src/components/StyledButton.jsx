@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 
 const StyledButton = ({ text, path = "/" }) => {
   return (
-    <button className="styled-button">
+    <button className="styled-button ">
       <Link to={path} className="button-wrapper">
         <div className="circle" />
-        <p className="view">{text}</p>
+        <p className="view cursor-link">{text}</p>
       </Link>
     </button>
   );

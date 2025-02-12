@@ -2,6 +2,8 @@ import ElasticCard from "./ElasticCard";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useEffect, useRef } from "react";
+import { NAVIGATION } from "../lib/constants";
+import Socials from "./Socials";
 gsap.registerPlugin(useGSAP);
 const DesktopSidebar = ({ open, setOpen }) => {
   const classname = open ? "desktop-sidebar" : "desktop-sidebar activee";
@@ -65,17 +67,22 @@ const DesktopSidebar = ({ open, setOpen }) => {
     <div ref={containerRef} className={classname}>
       <div className="sidebar-wrapper">
         <div className="sidebar-nav">
-          <ElasticCard text={"Home"} fontSize="1.8rem" fontWeight="300" />
-          <ElasticCard text={"Why Raf?"} path="about" fontSize="1.8rem" fontWeight="300" />
-          <ElasticCard text={"Work"} path="work" fontSize="1.8rem" fontWeight="300" />
-          <ElasticCard
-            text={"Side Projects"}
-            path="side" fontSize="1.8rem"
-            fontWeight="300"
-          />
-          <ElasticCard text={"Contact"} path="contact" fontSize="1.8rem" fontWeight="300" />
+          {NAVIGATION.map((item) => {
+            return (
+              <ElasticCard
+                key={item.label}
+                text={item.label}
+                path={item.path}
+                fontSize="1.8rem"
+                fontWeight="300"
+              />
+            );
+          })}
         </div>
       </div>
+      {/* <div className="mt"> */}
+        <Socials />
+      {/* </div> */}
     </div>
   );
 };

@@ -6,6 +6,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import WhiteShadow from "../WhiteShadow";
 import ParallaxSvg from "../ParallaxSvg";
+import Socials from "../Socials";
+import { FaWhatsapp } from "react-icons/fa6";
+import { CiLinkedin } from "react-icons/ci";
+import { FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const HeroSection = () => {
@@ -26,7 +31,7 @@ const HeroSection = () => {
   );
 
   return (
-    <div ref={containerRef} className="hero">
+    <div ref={containerRef} className="hero bg-[#1a1a1a]">
       <ParallaxSvg />
       <div className="text-wrapper">
         <div className="wrapper">
@@ -37,6 +42,8 @@ const HeroSection = () => {
           </div>
           <p className="text">You need a great website to stand out.</p>
           <StyledButton text="VIEW WORKS" path="/work" />
+
+          <Socials/>
         </div>
       </div>
       <div className="floating-image-wrapper">
@@ -46,14 +53,6 @@ const HeroSection = () => {
           alt="floating-image"
         />
       </div>
-      {/* <svg
-        className="hero-parallax-arrow parallax"
-        data-y-value="700"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 17 10"
-      >
-        <path d="M6.22,8.75,3.37,5.89H17V4.12H3.37L6.22,1.25,5,0,0,5l5,5Z"></path>
-      </svg> */}
       <WhiteShadow />
     </div>
   );

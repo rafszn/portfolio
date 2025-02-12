@@ -5,9 +5,6 @@ import { useLocation } from "react-router-dom";
 
 const ParallaxSvg = () => {
   const { pathname } = useLocation();
-
-  // const transform = pathname === "/" ? "scale(0.35)" : "scale(0.45)";
-
   const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
 
   useEffect(() => {
@@ -18,7 +15,7 @@ const ParallaxSvg = () => {
 
   useGSAP(() => {
     gsap.to(".hero-parallax-arrow", {
-      y: "200px",
+      y: "150px",
       ease: "none",
       scrollTrigger: {
         trigger: ".hero-parallax-arrow",
@@ -32,25 +29,25 @@ const ParallaxSvg = () => {
 
   const root = isMobile && pathname === "/";
   const otherRoutes = isMobile && pathname !== "/";
-  console.log(otherRoutes);
+
+  const styles = root
+    ? {
+        top: "35%",
+        transform: "scale(1.5) rotate(-90deg)",
+      }
+    : otherRoutes
+    ? {
+        top: "300px",
+        transform: "scale(1.5) rotate(-90deg)",
+      }
+    : {
+        transform: "scale(0.40) rotate(-90deg)",
+      };
   return (
     <svg
       className="hero-parallax-arrow parallax"
-      // style={{ transform }}
       style={{
-        ...(root
-          ? {
-              top: "35%",
-              transform: "scale(1.5) rotate(-90deg)",
-            }
-          : otherRoutes
-          ? {
-              top: "300px",
-              transform: "scale(1.5) rotate(-90deg)",
-            }
-          : {
-              transform: "scale(0.40) rotate(-90deg)",
-            }),
+        ...styles,
       }}
       data-y-value="700"
       xmlns="http://www.w3.org/2000/svg"

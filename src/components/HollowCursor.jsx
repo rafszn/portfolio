@@ -3,7 +3,7 @@ import gsap from "gsap";
 
 const HollowCursor = () => {
   const followerRef = useRef(null);
-
+  
   useEffect(() => {
     const follower = followerRef.current;
 
@@ -19,10 +19,34 @@ const HollowCursor = () => {
       });
     };
 
+    const handleMouseOver = (e) => {
+      if (e.target.matches(".cursor-link")) {
+        gsap.to(follower, {
+          scale: 1.8,
+          duration: 0.5,
+          ease: "power2.out",
+        });
+      }
+    };
+
+    const handleMouseOut = (e) => {
+      if (e.target.matches(".cursor-link")) {
+        gsap.to(follower, {
+          scale: 1,
+          duration: 0.5,
+          ease: "power2.out",
+        });
+      }
+    };
+
     window.addEventListener("mousemove", moveFollower);
+    document.addEventListener("mouseover", handleMouseOver);
+    document.addEventListener("mouseout", handleMouseOut);
 
     return () => {
       window.removeEventListener("mousemove", moveFollower);
+      document.removeEventListener("mouseover", handleMouseOver);
+      document.removeEventListener("mouseout", handleMouseOut);
     };
   }, []);
 
@@ -34,9 +58,10 @@ const HollowCursor = () => {
         position: "fixed",
         top: 0,
         left: 0,
-        width: "30px",
-        height: "30px",
-        border: "2px solid white",
+        width: "25px",
+        height: "25px",
+        border: "none",
+        backgroundColor: "rgba(128, 128, 128, 0.283)",
         borderRadius: "50%",
         pointerEvents: "none",
         zIndex: 9999,

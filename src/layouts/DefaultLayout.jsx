@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import DefaultHeader from "../components/DefaultHeader";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import DefaultFooter from "../components/DefaultFooter";
 gsap.registerPlugin(useGSAP);
 
 const DefaultLayout = () => {
@@ -16,7 +17,7 @@ const DefaultLayout = () => {
     <div className="default">
       <DefaultHeader />
       <Outlet />
-      <footer>this is footer</footer>
+      <DefaultFooter />
     </div>
   );
 };

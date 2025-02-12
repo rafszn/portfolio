@@ -12,13 +12,13 @@ const DefaultHeader = () => {
       <AnimatedLogo />
       {open ? (
         <IoClose
-          className="text-gray-400 hover:cursor-pointer"
+          className="text-gray-400 hover:cursor-pointer cursor-link"
           size={"40"}
           onClick={() => setOpen((prev) => !prev)}
         />
       ) : (
         <RxHamburgerMenu
-          className=" hover:cursor-pointer"
+          className=" hover:cursor-pointer cursor-link"
           color="white"
           size={"40"}
           onClick={() => setOpen((prev) => !prev)}

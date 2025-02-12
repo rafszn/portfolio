@@ -131,17 +131,13 @@ body {
 //TODO PARALLAXSVG
 .hero-parallax-arrow {
   position: absolute;
-  // rotate: -90deg;
   opacity: 0.2;
   stroke: rgba(255, 255, 255, 0.5);
   stroke-width: 0.05;
-  z-index: -10;
+  z-index: 1;
   fill: transparent;
-  // scale: 0.35;
 
   @include mobile {
-    // top: 35%;
-    // scale: 1.5;
   }
 }
 
@@ -229,8 +225,9 @@ body {
   border-top-left-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
   padding: 0 4rem;
   font-size: 3rem;
   transition: all 0.5s ease-in-out;
@@ -245,6 +242,10 @@ body {
 
   .sidebar-wrapper {
     font-family: "Satoshi", sans-serif;
+
+    // .mt{
+    //   margin-top: 4rem;
+    // }
   }
 
   &.activee {
@@ -270,7 +271,7 @@ body {
   filter: blur(250px);
 
   @include mobile {
-    left: -300px;
+    left: -320px;
   }
 }
 
@@ -471,6 +472,42 @@ body {
         }
       }
     }
+  }
+}
+
+//TODO CONTACT
+.contact-section {
+  padding: 10rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+
+  .wrapper {
+    // border: 1px solid blue;
+    display: flex;
+    // align-items: center;
+
+    .image-container {
+      flex: 1;
+      width: 100%;
+      border: 1px solid white;
+
+      .image-wrapper {
+        .profile {
+        }
+      }
+    }
+
+    .text-container {
+      flex: 1;
+      border: 3px solid purple;
+    }
+  }
+
+  @include mobile {
+    padding: 6rem 1rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -722,13 +759,183 @@ body {
   }
 }
 
-
 //TODP HOLLOW CURSOR
 
-.hollow-cursor{
-
+.hollow-cursor {
   @include mobile {
-
     display: none;
   }
+}
+
+//TODO LETSTALK SECTION
+.lets-talk {
+  padding: 10rem 0rem;
+  position: relative;
+  height: 60vh;
+  background-color: #242424;
+
+  @include mobile {
+    height: 30vh;
+  }
+
+  .wrapper {
+    border: 1px solid white;
+    background-color: #1a1a1a;
+    border-radius: 2rem;
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    bottom: -17.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35vh;
+    padding: 1rem;
+    box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.357);
+
+    .texts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Satoshi", sans-serif;
+
+      .title {
+        font-size: 1.1rem;
+        color: #809ac5;
+        padding: 1rem;
+      }
+
+      .web {
+        font-size: 2.4rem;
+      }
+
+      .last {
+        font-size: 1rem;
+        padding: 1rem;
+        font-weight: 200;
+      }
+    }
+  }
+}
+
+//TODO FOOTER
+.footer {
+  position: fixed;
+  left: 14%;
+  z-index: -50;
+  bottom: 0;
+  width: 72%;
+  margin-bottom: 1rem;
+
+  .top {
+    .texts {
+      margin-top: 2rem;
+      .custom {
+        font-family: "Satoshi", sans-serif;
+        font-size: 1rem;
+        padding: 0.5rem;
+        font-weight: 200;
+        margin-left: -0.6rem;
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .links {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        font-family: "Satoshi", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 200;
+        padding: 2rem 0;
+
+        p {
+          @include mobile {
+            flex: 1;
+            font-size: 1rem;
+            white-space: nowrap;
+          }
+        }
+        @include mobile {
+          flex-wrap: wrap;
+          gap: 0.7rem;
+        }
+      }
+
+      .love {
+        font-size: 1rem;
+        padding-top: 1rem;
+      }
+
+      .p {
+        font-family: "Satoshi", sans-serif;
+        font-size: 1rem;
+        font-weight: 200;
+      }
+    }
+  }
+  .gradient {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background: linear-gradient(to right, green, blue, purple, red);
+
+    @include mobile {
+      height: 3px;
+    }
+  }
+}
+
+//TODO SOCIALS
+.socials {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 40;
+
+  // @include mobile {
+  //   gap: 1;
+  // }
+  span {
+
+    a{
+
+      @include mobile {
+        padding: 0;
+      }
+    }
+    svg {
+      font-size: 2rem;
+      @include mobile {
+      }
+    }
+
+    &:hover {
+      color: rgb(222, 88, 88);
+    }
+
+    @include mobile{
+      gap: 5px;
+    }
+  }
+
 }

@@ -4,6 +4,8 @@ import Container from "../components/Container";
 import ParallaxSvg from "../components/ParallaxSvg";
 import SelectedWorkSection from "../components/sections/SelectedWorkSection";
 import Works from "../components/sections/Works";
+import LetsTalkSection from "../components/sections/LetsTalkSection";
+import Wave from "react-wavify";
 gsap.registerPlugin(useGSAP);
 
 const WorkPage = () => {
@@ -15,15 +17,18 @@ const WorkPage = () => {
     });
   });
   return (
-    <Container>
-      <div className="work w-full relative">
-        <ParallaxSvg />
-        <SelectedWorkSection />
-        <Works />
-
-        <div style={{ height: "500vh" }}></div>
-      </div>
-    </Container>
+    <>
+      <Container>
+        <div className="work w-full relative">
+          <ParallaxSvg />
+          <SelectedWorkSection />
+          <Works />
+        </div>
+      </Container>
+      
+      <LetsTalkSection text={"Want your own?"} />
+      <div style={{ height: "60vh" }}></div>
+    </>
   );
 };
 export default WorkPage;

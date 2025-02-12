@@ -2,7 +2,7 @@ import TextHighlighter from "../TextHighlighter";
 
 const SelectedWorkSection = () => {
   return (
-    <div className="selected-works">
+    <div className="selected-works bg-[#1a1a1a]">
       <div className="selected-wrapper">
         <div className="image-preview">
           <div className="preview">
