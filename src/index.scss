@@ -90,7 +90,7 @@ body {
   gap: 3rem;
 
   @include mobile {
-    padding: 10rem 1rem;
+    padding: 8rem 1rem;
     flex-direction: column-reverse;
     // border: 1px solid red;
   }
