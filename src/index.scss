@@ -93,18 +93,12 @@ body {
     padding: 8rem 1rem;
     padding-bottom: 13rem;
     flex-direction: column-reverse;
-    // border: 1px solid red;
   }
 
   .text-wrapper {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    // padding-right: rem;
-
-    @include mobile {
-      // border: 1px solid;
-    }
 
     .wrapper {
       @include mobile {
@@ -126,9 +120,6 @@ body {
     }
   }
   .floating-image-wrapper {
-    @include mobile {
-      // border: 1px solid ;
-    }
     flex: 1;
     width: 100%;
   }
@@ -248,10 +239,6 @@ body {
 
   .sidebar-wrapper {
     font-family: "Satoshi", sans-serif;
-
-    // .mt{
-    //   margin-top: 4rem;
-    // }
   }
 
   &.activee {
@@ -487,14 +474,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  // border: 1px solid red;
-
-
 
   .wrapper {
-    // border: 1px solid blue;
     display: flex;
-    // align-items: center;
     gap: 1rem;
 
     @include mobile {
@@ -505,26 +487,21 @@ body {
 
     .image-container {
       flex: 1;
-      // width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 2rem;
-      // border: 1px solid white;
 
-        // border: 1px solid red;
-      @include mobile{
+      @include mobile {
         padding: 0;
         flex: 1;
       }
 
       .image-wrapper {
         position: relative;
-        // width: 100%;
         width: 500px;
         height: 500px;
-        border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%; //use
-        // background-image: url("/assets/r4.jpg");
+        border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -536,11 +513,7 @@ body {
         @include mobile {
           width: 350px;
           height: 350px;
-          // height: 100%;
         }
-        // &:hover {
-        //   border-radius: 80% 50% 70% 20% / 100% 70% 40% 30%;
-        // }
 
         img {
           width: 100%;
@@ -551,11 +524,85 @@ body {
     }
 
     .text-container {
-      // width: 100%;
-      // width: 500px;
-
+      width: 500px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
       flex: 1;
-      // border: 3px solid purple;
+
+      @include mobile {
+        width: 100%;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        font-family: "Satoshi", sans-serif;
+        margin-top: 3rem;
+
+        .chat {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1rem;
+          color: #99b9ef;
+        }
+
+        .title {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 3rem;
+          letter-spacing: 2px;
+          margin-top: -1rem;
+        }
+        .contact-me {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1rem;
+          margin-top: -1rem;
+          font-weight: 200;
+        }
+
+        form {
+          input,
+          textarea {
+            border: 1px solid white;
+            width: 100%;
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            padding: 1rem;
+          }
+
+          textarea {
+            min-height: 200px;
+            height: auto;
+            resize: vertical;
+          }
+
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            color: white;
+            border: 1px solid white;
+            font-size: 0.8rem;
+            padding: 0.6rem;
+            cursor: pointer;
+            letter-spacing: 10px;
+            transition: background-color 0.3s ease-in-out;
+
+            &:hover {
+              background-color: white;
+              color: black;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -628,10 +675,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  @include mobile {
-    // border: 1px solid red;
-  }
 
   .selected-wrapper {
     .image-preview {
@@ -846,7 +889,7 @@ body {
 .lets-talk {
   padding: 10rem 0rem;
   position: relative;
-  height: 60vh;
+  height: 30vh;
   background-color: #242424;
 
   @include mobile {
@@ -987,9 +1030,6 @@ body {
   gap: 1rem;
   z-index: 40;
 
-  // @include mobile {
-  //   gap: 1;
-  // }
   span {
     a {
       @include mobile {
@@ -1008,6 +1048,99 @@ body {
 
     @include mobile {
       gap: 5px;
+    }
+  }
+}
+
+// TODO CONTACT CARD
+.contact-card {
+  padding: 10rem 0rem;
+  position: relative;
+  height: 30vh;
+  background-color: #242424;
+
+  @include mobile {
+    height: 15vh;
+  }
+
+  .wrapper {
+    border: 1px solid white;
+    background-color: #1a1a1a;
+    border-radius: 2rem;
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    bottom: -17.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35vh;
+    padding: 1rem;
+    box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.357);
+
+    .texts {
+      display: flex;
+      // width: 100%;
+      // flex-direction: column;
+      // align-items: center;
+      font-family: "Satoshi", sans-serif;
+      // border: 1px solid red;
+      gap: 1.5rem;
+
+      @include mobile {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .img-wrapper {
+        flex: 2;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 80px;
+          height: 80px;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+
+      .text {
+        flex: 5;
+        h1 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1.2rem;
+          font-weight: 200;
+          padding: 1rem 0;
+        }
+
+        a {
+          font-size: 1rem;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+      }
+
+      // .title {
+      //   font-size: 1.1rem;
+      //   color: #809ac5;
+      //   padding: 1rem;
+      // }
+
+      // .web {
+      //   font-size: 2.4rem;
+      // }
+
+      // .last {
+      //   font-size: 1rem;
+      //   padding: 1rem;
+      //   font-weight: 200;
+      // }
     }
   }
 }
