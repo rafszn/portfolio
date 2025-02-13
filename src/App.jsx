@@ -5,12 +5,14 @@ import HollowCursor from "./components/HollowCursor";
 import useSmoothScroll from "./lib/hooks/useSmoothScroll";
 import PageWrapper from "./components/PageWrapper";
 import DefaultLayout from "./layouts/DefaultLayout";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   useSmoothScroll();
   return (
     <div className="relative">
       <HollowCursor />
+      <ToastContainer />
       <PageWrapper>
         <Routes>
           <Route element={<DefaultLayout />}>
