@@ -16,9 +16,14 @@ const ContactSection = () => {
     setLoading(true);
 
     emailjs
-      .sendForm("service_0n7dkup", "template_49g2cxg", form.current, {
-        publicKey: "fQrAQzGlRfNMHfT-F",
-      })
+      .sendForm(
+        import.meta.env.VITE_EMAIL_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: import.meta.env.VITE_EMAIL_PUBLIC_KEY,
+        },
+      )
       .then(
         () => {
           setLoading(false);
