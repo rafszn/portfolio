@@ -60,7 +60,7 @@ const ContactSection = () => {
       <div className="wrapper">
         <div className="image-container">
           <div className="image-wrapper">
-            <img src="/assets/r4.jpg" />
+            <img src="/assets/raf1.png" />
           </div>
         </div>
 

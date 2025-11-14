@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import StyledButton from "../StyledButton";
 import TextHighlighter from "../TextHighlighter";
 import gsap from "gsap";
@@ -7,15 +7,10 @@ import { useGSAP } from "@gsap/react";
 import WhiteShadow from "../WhiteShadow";
 import ParallaxSvg from "../ParallaxSvg";
 import Socials from "../Socials";
-import { FaWhatsapp } from "react-icons/fa6";
-import { CiLinkedin } from "react-icons/ci";
-import { FaGithub } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const HeroSection = () => {
   const containerRef = useRef();
-  
 
   useGSAP(
     () => {
@@ -27,7 +22,7 @@ const HeroSection = () => {
         ease: "power1.inOut",
       });
     },
-    { scope: containerRef },
+    { scope: containerRef }
   );
 
   return (
@@ -41,9 +36,9 @@ const HeroSection = () => {
             <TextHighlighter text="sites/apps." style="200" />
           </div>
           <p className="text">You need a great website to stand out.</p>
-          <StyledButton text="VIEW WORKS" path="/work" />
+          <StyledButton text="VIEW WORKS" path="/works" />
 
-          <Socials/>
+          <Socials />
         </div>
       </div>
       <div className="floating-image-wrapper">

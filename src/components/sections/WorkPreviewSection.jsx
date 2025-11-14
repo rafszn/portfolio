@@ -37,7 +37,7 @@ const WorkPreviewSection = () => {
               <h1>Custom designed. Custom built.</h1>
               <p className="pp">I don&apos;t use templates or page builders.</p>
 
-              <ElasticCard text="View Work" path="/work"/>
+              <ElasticCard text="View Work" path="/works"/>
             </div>
           </div>
         </div>

@@ -9,6 +9,15 @@ export const WORKS = [
     mobile: "/assets/mobile-byola.png",
   },
   {
+    title: "VoteNaija Platform",
+    tag: "Voting | Fintech",
+    description:
+      " Nigeria’s leading platform for monetized voting. We give event organizers, creators, and brands the tools to host paid voting contests, track performance in real time, and earn from every vote.",
+    image: "/assets/votenaija.jpg",
+    demoLink: "https://www.votenaija.ng",
+    mobile: "/assets/mobile-votenaija.jpg",
+  },
+  {
     title: "Prizeless",
     description:
       "A platform for comparing prices across multiple online stores in Nigeria, helping users find the best deals and track price changes.",
@@ -27,15 +36,6 @@ export const WORKS = [
     mobile: "/assets/lukamason-mobile.png",
   },
   {
-    title: "AgroHive",
-    description:
-      "A platform that connects agricultural talents with opportunities. It helps businesses find skilled workers and helps job seekers find agricultural jobs.",
-    tag: "Agritech Platform | React Framework",
-    demoLink: "https://agrohive.co",
-    image: "/assets/agrohive.png",
-    mobile: "/assets/agrohive-mobile.png",
-  },
-  {
     title: "Hemam Synergy",
     description:
       "A leading agribusiness and energy company in Africa. It helps smallholder farmers in Africa by providing them with access to technology, markets, training, and clean energy solutions.",
@@ -43,6 +43,15 @@ export const WORKS = [
     demoLink: "https://hemamsynergy.com",
     image: "/assets/hemam.png",
     mobile: "/assets/hemam-mobile.png",
+  },
+  {
+    title: "Bisven Marketplace",
+    description:
+      "An online marketplace connecting buyers and sellers of various products and services in Nigeria and Guyana.",
+    tag: "Marketplace",
+    demoLink: "https://bisven.com",
+    image: "/assets/bisven.png",
+    mobile: "/assets/bisven-mobile.jpg",
   },
 ];
 
@@ -53,7 +62,7 @@ export const NAVIGATION = [
   },
   {
     label: "Work",
-    path: "/work",
+    path: "/works",
   },
   {
     label: "Contact",
